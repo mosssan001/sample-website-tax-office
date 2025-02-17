@@ -1,0 +1,715 @@
+*{
+    box-sizing: border-box;
+    font-family: "游ゴシック体","Yu Gothic",YuGothic,"ヒラギノ角ゴ ProN W3","Hiragino Kaku Gothic ProN","メイリオ",Meiryo,sans-serif;
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+a {
+    color:inherit;
+}
+
+.flex-box {
+    display: flex;
+}
+
+.title-box {
+    text-align: center;
+}
+
+.h2-title{
+    display: inline-block;
+    border-bottom: solid #fa723d 1px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    font-size: 1.3rem;
+}
+
+
+/* btn */
+.btn1 {
+    text-align: center;
+    border: 1px solid #073061;
+    color: #073061;
+    font-size: 0.9rem;
+    margin: 30px 0 0 auto;
+    width: 50%;
+}
+
+.btn-a {
+    display: block;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+.btn-a:hover{
+    background-color: #073061;
+    color: white;
+}
+
+
+
+main {
+    margin: 0 40px;
+    position: relative;
+}
+
+.homelogo {
+    padding-top:80px;
+    position: fixed;
+    width: 6%;
+    writing-mode:vertical-lr;
+    opacity: 0;
+    animation-name: fadein;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    0% {
+       opacity: 0;
+    }
+    100% {
+       opacity: 1;
+    }
+  }
+
+.homelogo p {
+    margin: 30px auto 0;
+    color: #073061;
+    font-weight: 700;
+
+}
+
+.home-logo img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+  /* ヘッダーエリア */
+header {
+    position: relative;
+}
+
+.menu {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.home-sp {
+    display: none;
+}
+
+
+.menu span{
+    position: absolute;
+    height: 2px;
+    width: 32px;
+    background-color: #073061;
+    transition: all 0.5s;
+}
+
+.menu-bar1{
+    top: 15px;
+    left: 5px;
+}
+
+.menu-bar2{
+    top: 25px;
+    left: 5px;
+}
+
+.menu-bar1.tap{
+    transform: translateY(5px) rotate(-45deg);
+}
+
+.menu-bar2.tap {
+    transform: translateY(-5px) rotate(45deg);
+}
+
+
+.title-div,.title-div2 {
+    display: none;
+}
+
+nav {
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+    width: 30%;
+    opacity: 0;
+    padding: 120px 120px 10px 10px;
+    text-align: right;
+    line-height: 3rem;
+    font-size: 1rem;
+    transition: 0.4s;
+    z-index: -2;
+}
+
+nav.tap {
+    z-index: 2;
+    opacity: 1;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+}
+
+nav ul li{
+    position: relative;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+nav ul li::before {
+    content: "";
+    background-color: #073061;
+    width: 18px;
+    height: 1px;
+    position: absolute;
+    top: 49%;
+    left: -20px;
+    transform: scale(0,1);
+    transform-origin: right top;
+    transition: 0.3s;
+}
+
+nav ul li:hover{
+    color:#073061;
+}
+
+nav ul li:hover::before{
+    transform: scale(1,1);
+}
+
+/* コンテンツエリア */
+
+.sec-wrap {
+    max-width: 1450px;
+    margin: 0 auto 0;
+    padding-top: 70px;
+}
+
+/* h1 title */
+
+.title-about {
+    margin-left: 200px;
+    font-size: 3rem;
+    display: flex;
+    font-family: "GT America",sans-serif;
+    font-weight: 500;
+}
+
+.title-about span {
+    padding-right: 10px;
+    display: block;
+    transform: translate(0, 105%);
+    transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.9s;
+}
+
+.title-about span:nth-child(1) {
+    transition-delay: 0.4s;
+}
+
+.title-about span:nth-child(2) {
+    transition-delay: 0.46s;
+}
+
+.title-about span:nth-child(3) {
+    transition-delay: 0.52s;
+}
+
+.title-about span:nth-child(4) {
+    transition-delay: 0.58s;
+}
+
+.title-about span:nth-child(5) {
+    transition-delay: 0.64s;
+}
+
+
+.title-about span:nth-child(7) {
+    transition-delay: 0.76s;
+}
+
+.title-about span:nth-child(8) {
+    transition-delay: 0.82s;
+}
+
+/* table-area */
+
+.table-area {
+    padding: 0px 120px;
+    margin-top: 180px;
+    margin-bottom: 150px;
+
+}
+
+/* table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+table td {
+    border: 1px solid black;
+    height: 35px;
+}
+
+.table-midashi {
+    background-color: rgb(241, 241, 241);
+}
+
+/* footer */
+
+footer {
+    background-color: #073061;
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+    font-size: 1rem;
+}
+
+.info1 p{
+    margin-top: 10px;
+}
+
+.footer-logo {
+    width: 5%;
+    height: 5%;
+    margin-top: 20px;
+}
+
+.info2 {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.tel-box,.fax-box {
+    padding: 8px;
+    border: 1px solid white;
+}
+
+.tel-box{
+    margin-right: 10px;
+}
+
+.fax-box {
+    margin-left: 10px;
+}
+
+.info3 {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+
+.tw-box,.fa-box{
+    width: 3%;
+}
+
+.tw-box{
+    margin-right: 70px;
+}
+
+.fa-box{
+    margin-left: 70px;
+}
+
+.tw-box img,.fa-box img {
+    width: 100%;
+}
+
+.copy {
+    margin-top: 10px;
+    font-size: 0.5rem;
+}
+
+/* contact */
+.contact {
+    width: 60%;
+    margin: 100px auto;
+    text-align: center;
+    padding: 35px 0;
+    border: 1px solid #073061;
+    transition: 0.4s;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    color: #073061;
+}
+
+.contact::after {
+    content: "";
+    display: inline-block;
+    width: 100px;
+    background-color: #073061;
+    height: 1px;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+}
+
+.contact::before {
+    display: inline-block;
+    content: "";
+    width: 25px;
+    height: 1px;
+    background-color: #073061;
+    position: absolute;
+    top: 50%;
+    right: 52px;
+    transform:rotate(30deg) translateY(-7px);
+}
+
+.contact:hover {
+    box-shadow: #073061 10px 10px;
+    top: -8px;
+    left: -8px;
+}
+
+
+@media screen and (max-width: 850px) {
+
+    .wrapper {
+        padding: 0 30px;
+    }
+
+    .flex-box {
+        display: block;
+    }
+
+    main {
+        position: relative;
+        margin: 0 ;
+        overflow: hidden;
+        padding: 0 25px;
+    }
+
+    /* ヘッダーエリア */
+    header {
+        position: relative;
+    }
+    
+    .menu-area{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 60px;
+        transition: 0.4s;
+        z-index: 2;
+        background-color: white;
+    }
+
+    .home-pc {
+        display: none;
+    }
+
+    .home-sp {
+        display: flex;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #073061;
+    }
+
+    .home-sp img{
+        padding: 10px 2px 15px 2px;
+        margin-left: 20px;
+        width: 12%;
+    }
+
+    .home-sp p{
+        margin: 25px 0;
+    }
+
+    .menu {
+        width: 50px;
+        height: 50px;
+        position: fixed;
+        right: 20px;
+        top: 8px;
+        cursor: pointer;
+
+    }
+    
+    .menu span{
+        position: absolute;;
+        height: 2px;
+        width: 32px;
+        background-color: #073061;
+        transition: all 0.5s;
+    }
+    
+    .menu-bar1{
+        top: 20px;
+        right: 10px;
+        left: auto;
+    }
+    
+    .menu-bar2{
+        top: 30px;
+        right: 10px;
+        left: auto;
+    }
+    
+    .menu-bar1.tap{
+        transform: translateY(5px) rotate(-45deg);
+    }
+    
+    .menu-bar2.tap {
+        transform: translateY(-5px) rotate(45deg);
+    } 
+
+    nav {
+        background-color: white;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        width: 60%;
+        opacity: 0;
+        padding: 100px 40px 0px 10px;
+        text-align: right;
+        line-height: 3rem;
+        font-size: 1rem;
+        transition: 0.4s;
+        z-index: -2;
+    }
+    
+    nav.tap {
+        z-index: 2;
+        opacity: 1;
+    }
+    
+    
+    nav ul {
+        list-style: none;
+    }
+
+    nav ul li {
+        margin-bottom: 30px;
+    }
+
+
+    /* コンテンツエリア */
+
+    .sec-wrap {
+        max-width: 1450px;
+        margin: 0 auto 0;
+        padding-top: 70px;
+    }
+
+    /* h1 title */
+
+    .title-about {
+        font-size: 1.5rem;
+        margin: 0 auto;
+        justify-content: center;
+        display: flex;
+        font-family: "GT America",sans-serif;
+        font-weight: 500;
+    }
+
+    .title-about span {
+        padding-right: 10px;
+        display: block;
+        transform: translate(0, 105%);
+        transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.9s;
+    }
+
+    .title-about span:nth-child(1) {
+        transition-delay: 0.4s;
+    }
+
+    .title-about span:nth-child(2) {
+        transition-delay: 0.46s;
+    }
+
+    .title-about span:nth-child(3) {
+        transition-delay: 0.52s;
+    }
+
+    .title-about span:nth-child(4) {
+        transition-delay: 0.58s;
+    }
+
+    .title-about span:nth-child(5) {
+        transition-delay: 0.64s;
+    }
+
+
+    .title-about span:nth-child(7) {
+        transition-delay: 0.76s;
+    }
+
+    .title-about span:nth-child(8) {
+        transition-delay: 0.82s;
+    }
+
+    .flex-box {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .h2-title{
+        display: inline-block;
+        border-bottom: solid #fa723d 1px;
+        font-weight: lighter;
+        margin-bottom: 30px;
+        font-size: 1.3rem;
+    }
+
+
+    .btn1 {
+        text-align: center;
+        border: 1px solid #073061;
+        color: #073061;
+        font-size: 0.9rem;
+        margin: 30px 0 0 auto;
+        width: 50%;
+    }
+
+    .btn-a {
+        display: block;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
+    }
+
+    .btn-a:hover{
+        background-color: #073061;
+        color: white;
+    }
+
+
+    /* table-area */
+
+    .table-area {
+        padding: 0px;
+        margin-top: 180px;
+        margin-bottom: 150px;
+    }
+
+    /* table */
+
+    .table-pare {
+        overflow-x: scroll;
+    }
+
+    table {
+        width: 500px;
+        border-collapse: collapse;
+        font-size: 0.7rem;
+        text-align: center;
+    }
+
+    table td {
+        border: 1px solid black;
+        height: 35px;
+    }
+
+    .table-midashi {
+        background-color: rgb(241, 241, 241);
+    }
+
+    .table-area0 {
+        margin-top: 100px;
+    }
+        
+    /* footer */
+
+    footer {
+        background-color: #073061;
+        text-align: center;
+        color: white;
+        padding: 10px 0;
+        font-size: 0.7rem;
+    }
+
+    .info1 p{
+        margin-top: 10px;
+    }
+
+    .footer-logo {
+        width: 15%;
+        height: 15%;
+        margin-top: 20px;
+    }
+
+    .info2 {
+        margin-top: 20px;
+        display: block;
+    }
+
+    .tel-box,.fax-box {
+        display: block;
+        width: 50%;
+        margin: 15px auto;
+        padding: 8px;
+        border: 1px solid white;
+    }
+
+    .info3 {
+        margin-top: 20px;
+        justify-content: center;
+        display:flex;
+    }
+
+    .tw-box,.fa-box{
+        width: 30%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .tw-box img,.fa-box img {
+        width: 20%;
+        height: auto;
+    }
+
+    .copy {
+        margin-top: 10px;
+        font-size: 0.5rem;
+    }
+
+    
+    .contact {
+        width: 80%;
+        margin: 100px auto;
+        text-align: center;
+        padding: 20px 0;
+        border: 1px solid #073061;
+        transition: 0.4s;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        box-shadow: #073061 10px 10px;
+        top: -8px;
+        left: -8px;
+        color: #073061;
+    }
+
+        
+    @media screen and (max-width: 1100px) {
+        .sec3 {
+            margin-top: 450px;
+        }
+    }
+
+}
